@@ -25,10 +25,14 @@ This is an R Markdown document. This markdown document contains the code and des
 	   acsum$date <- as.Date(acsum$date)
 ## Including Plots
 	   ggplot(acsum, aes(x = date, y = steps)) + 
-	   geom_bar(stat = "identity") +
+	   geom_histogram(stat = "identity") +
 	   theme_bw() + labs(x = "Date", y = "No of Steps Taken") +
 	   scale_x_date(breaks =acsum$date,labels = date_format("%d/%m/%Y")) +
 	   theme(axis.text.x = element_text(angle=90, vjust = 0.5))
+```
+
+```
+## Warning: Ignoring unknown parameters: binwidth, bins, pad
 ```
 
 ![plot of chunk plothistogram](figure/plothistogram-1.png)
@@ -95,10 +99,14 @@ This is an R Markdown document. This markdown document contains the code and des
 
 
 	  ggplot(acsum1, aes(x = date, y = steps)) + 
-	  geom_bar(stat = "identity") +
+	  geom_histogram(stat = "identity") +
 	  theme_bw() + labs(x = "Date", y = "No of Steps Taken") +
 	  scale_x_date(breaks =acsum1$date,labels = date_format("%d/%m/%Y")) +
- 	  theme(axis.text.x = element_text(angle=90, vjust = 0.5))
+ 	  theme(axis.text.x = element_text(angle=90, vjust = 0.5)) 
+```
+
+```
+## Warning: Ignoring unknown parameters: binwidth, bins, pad
 ```
 
 ![plot of chunk unnamed-chunk-1](figure/unnamed-chunk-1-1.png)
